@@ -22,17 +22,11 @@ int run(string command, int output = 0)
         {
             for (int i = 0; buffer[i] != '\0'; i++)
             {
-                if (buffer[i] == '>')
-                    result += "&gt";
-                else if (buffer[i] == '<')
-                    result += "&lt";
-                else if (buffer[i] == ' ')
-                    result += "&nbsp;";
-                else if (buffer[i] == '\t')
-                    result += "&nbsp;&nbsp;";
-
-                else
-                    result += buffer[i];
+                if (buffer[i] == '>') result += "&gt";
+                else if (buffer[i] == '<') result += "&lt";
+                else if (buffer[i] == ' ') result += "&nbsp;";
+                else if (buffer[i] == '\t') result += "&nbsp;&nbsp;";
+                else result += buffer[i];
             }
         }
     }
